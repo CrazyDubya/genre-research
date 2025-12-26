@@ -67,6 +67,7 @@ interactive-fiction-research/
 │   ├── templates/
 │   │   └── if-bible-template.md (world and story tracking)
 │   ├── worksheets/
+│   │   ├── canon-management-worksheet.md (schemas and canon tracking)
 │   │   └── puzzle-design-worksheet.md (puzzle and challenge planning)
 │   └── checklists/
 │       └── revision-checklist.md (interaction consistency check)
@@ -197,6 +198,11 @@ interactive-fiction-research/
 - Step-by-step worksheet for planning interactive elements
 - Sections: Basic world, puzzle concepts, object relationships, solution paths, testing approaches
 - **Use before development** to plan your interactive systems
+
+**[story-framework/worksheets/canon-management-worksheet.md](story-framework/worksheets/canon-management-worksheet.md)**
+- Schemas for characters, locations, timeline, lore, and themes
+- Canon update rules, contradiction detection steps, and lock fields
+- **Use during drafting** to keep world facts consistent
 
 **[story-framework/checklists/revision-checklist.md](story-framework/checklists/revision-checklist.md)**
 - Systematic revision checklist for interactive systems
