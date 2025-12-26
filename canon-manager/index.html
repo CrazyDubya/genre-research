@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canon Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Canon Manager</h1>
+      <p>Track canon entities, link them to scenes, and validate continuity before generating prompts.</p>
+    </div>
+    <div class="header-actions">
+      <button id="exportButton" type="button">Export JSON</button>
+      <button id="importButton" type="button">Import JSON</button>
+      <input id="importFile" type="file" accept="application/json" hidden />
+    </div>
+  </header>
+
+  <main>
+    <section class="grid two-column">
+      <article class="panel">
+        <h2>Characters</h2>
+        <form id="characterForm" class="stack">
+          <input type="hidden" id="characterId" />
+          <label>
+            Name
+            <input id="characterName" required />
+          </label>
+          <label>
+            Role / Description
+            <textarea id="characterDescription" rows="3"></textarea>
+          </label>
+          <label>
+            Faction
+            <select id="characterFaction"></select>
+          </label>
+          <label>
+            Home Location
+            <select id="characterLocation"></select>
+          </label>
+          <label>
+            Known Timeline Events
+            <div id="characterKnowledge" class="checkbox-grid"></div>
+          </label>
+          <div class="form-actions">
+            <button type="submit">Save Character</button>
+            <button type="button" id="characterReset">Clear</button>
+          </div>
+        </form>
+        <div id="characterList" class="list"></div>
+      </article>
+
+      <article class="panel">
+        <h2>Locations</h2>
+        <form id="locationForm" class="stack">
+          <input type="hidden" id="locationId" />
+          <label>
+            Name
+            <input id="locationName" required />
+          </label>
+          <label>
+            Description
+            <textarea id="locationDescription" rows="3"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit">Save Location</button>
+            <button type="button" id="locationReset">Clear</button>
+          </div>
+        </form>
+        <div id="locationList" class="list"></div>
+      </article>
+    </section>
+
+    <section class="grid two-column">
+      <article class="panel">
+        <h2>Factions</h2>
+        <form id="factionForm" class="stack">
+          <input type="hidden" id="factionId" />
+          <label>
+            Name
+            <input id="factionName" required />
+          </label>
+          <label>
+            Ideology / Goals
+            <textarea id="factionDescription" rows="3"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit">Save Faction</button>
+            <button type="button" id="factionReset">Clear</button>
+          </div>
+        </form>
+        <div id="factionList" class="list"></div>
+      </article>
+
+      <article class="panel">
+        <h2>Magic / Tech Rules</h2>
+        <form id="ruleForm" class="stack">
+          <input type="hidden" id="ruleId" />
+          <label>
+            Rule Name
+            <input id="ruleName" required />
+          </label>
+          <label>
+            Rule Details
+            <textarea id="ruleDescription" rows="3"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit">Save Rule</button>
+            <button type="button" id="ruleReset">Clear</button>
+          </div>
+        </form>
+        <div id="ruleList" class="list"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Timeline Events</h2>
+      <form id="eventForm" class="stack">
+        <input type="hidden" id="eventId" />
+        <div class="grid three-column">
+          <label>
+            Event Name
+            <input id="eventName" required />
+          </label>
+          <label>
+            Date / Time (YYYY-MM-DD or narrative date)
+            <input id="eventDate" />
+          </label>
+          <label>
+            Location
+            <select id="eventLocation"></select>
+          </label>
+        </div>
+        <label>
+          Description
+          <textarea id="eventDescription" rows="3"></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit">Save Event</button>
+          <button type="button" id="eventReset">Clear</button>
+        </div>
+      </form>
+      <div id="eventList" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Scenes</h2>
+      <form id="sceneForm" class="stack">
+        <input type="hidden" id="sceneId" />
+        <div class="grid three-column">
+          <label>
+            Scene Title
+            <input id="sceneTitle" required />
+          </label>
+          <label>
+            Scene Date / Time
+            <input id="sceneDate" />
+          </label>
+          <label>
+            Location
+            <select id="sceneLocation"></select>
+          </label>
+        </div>
+        <label>
+          Summary / Purpose
+          <textarea id="sceneSummary" rows="3"></textarea>
+        </label>
+        <div class="grid two-column">
+          <label>
+            Characters Present
+            <div id="sceneCharacters" class="checkbox-grid"></div>
+          </label>
+          <label>
+            Factions Involved
+            <div id="sceneFactions" class="checkbox-grid"></div>
+          </label>
+        </div>
+        <div class="grid two-column">
+          <label>
+            Rules Referenced
+            <div id="sceneRules" class="checkbox-grid"></div>
+          </label>
+          <label>
+            Events Mentioned / Triggered
+            <div id="sceneEvents" class="checkbox-grid"></div>
+          </label>
+        </div>
+        <label>
+          Required Knowledge (events characters must already know)
+          <div id="sceneKnowledge" class="checkbox-grid"></div>
+        </label>
+        <div class="form-actions">
+          <button type="submit">Save Scene</button>
+          <button type="button" id="sceneReset">Clear</button>
+        </div>
+      </form>
+      <div id="sceneList" class="list"></div>
+    </section>
+
+    <section class="grid two-column">
+      <article class="panel">
+        <h2>Validation Checks</h2>
+        <div id="validationList" class="validation"></div>
+      </article>
+
+      <article class="panel">
+        <h2>Prompt Builder</h2>
+        <form id="promptForm" class="stack">
+          <label>
+            Scene
+            <select id="promptScene"></select>
+          </label>
+          <label class="toggle">
+            <input id="promptLock" type="checkbox" checked />
+            Enforce canon locks (prevent changes to locked facts)
+          </label>
+          <button type="submit">Generate Prompt</button>
+        </form>
+        <textarea id="promptOutput" rows="16" readonly></textarea>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Canon data is stored locally in your browser. Export frequently to share with collaborators.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
