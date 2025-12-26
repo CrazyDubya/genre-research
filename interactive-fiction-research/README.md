@@ -65,11 +65,16 @@ interactive-fiction-research/
 │
 ├── story-framework/
 │   ├── templates/
-│   │   └── if-bible-template.md (world and story tracking)
+│   │   ├── if-bible-template.md (world and story tracking)
+│   │   ├── style-guide-template.md (voice vocabulary and bans)
+│   │   └── voice-profile-template.md (voice definition and snapshots)
+│   ├── prompting/
+│   │   └── voice-style-prompts.md (drafting/revision prompt kit)
 │   ├── worksheets/
 │   │   └── puzzle-design-worksheet.md (puzzle and challenge planning)
 │   └── checklists/
-│       └── revision-checklist.md (interaction consistency check)
+│       ├── revision-checklist.md (interaction consistency check)
+│       └── voice-consistency-checker.md (voice consistency across chapters)
 │
 └── examples/
     └── structure-examples.md (famous IF works breakdowns)
@@ -193,6 +198,18 @@ interactive-fiction-research/
 - Sections: World overview, object inventory, puzzle mapping, state tracking, character behaviors, revision notes
 - **Use throughout development** to maintain consistency across the world
 
+**[story-framework/templates/voice-profile-template.md](story-framework/templates/voice-profile-template.md)**
+- Voice profile template for defining POV, tense, taboo content, and inspiration comps
+- Includes snapshot logging for project or series-level voice control
+
+**[story-framework/templates/style-guide-template.md](story-framework/templates/style-guide-template.md)**
+- Phrase lists, preferred vocabulary, and banned words for the narrative voice
+- Excerpt pack for prompt-ready style references
+
+**[story-framework/prompting/voice-style-prompts.md](story-framework/prompting/voice-style-prompts.md)**
+- Drafting and revision prompts that always include style guide excerpts
+- Built-in checks for voice consistency across chapters
+
 **[story-framework/worksheets/puzzle-design-worksheet.md](story-framework/worksheets/puzzle-design-worksheet.md)**
 - Step-by-step worksheet for planning interactive elements
 - Sections: Basic world, puzzle concepts, object relationships, solution paths, testing approaches
@@ -203,6 +220,10 @@ interactive-fiction-research/
 - 10 phases: World, Objects, Puzzles, Characters, Interaction, Exploration, Story, Prose, IF Specifics, Player Experience
 - Final questions and revision priorities
 - **Use during testing** to ensure quality across all interactions
+
+**[story-framework/checklists/voice-consistency-checker.md](story-framework/checklists/voice-consistency-checker.md)**
+- Chapter-by-chapter voice consistency checklist
+- Cross-chapter drift detection and fix log
 
 ---
 

@@ -353,6 +353,18 @@ S
 
 ---
 
+## Voice & Style Toolkit
+
+**Voice Profile:** [Link to voice profile template or filled profile]
+
+**Style Guide:** [Link to style guide document]
+
+**Active Voice Snapshot:** [Snapshot name + date]
+
+**Drafting/Revision Prompt Note:** Include short style guide excerpts in every drafting and revision prompt.
+
+---
+
 ## Technical Notes
 
 **Implementation Platform:**
