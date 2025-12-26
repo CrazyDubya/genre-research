@@ -204,6 +204,13 @@ interactive-fiction-research/
 - Final questions and revision priorities
 - **Use during testing** to ensure quality across all interactions
 
+**[story-framework/workflow-and-collaboration.md](story-framework/workflow-and-collaboration.md)**
+- Version control guidance for chapters/scenes with diff views
+- Feedback threads for paragraph-level notes and reviewer discussion
+- Milestone checkpoints (Draft v1 → Beta Review → Final)
+- Export options and formatting considerations (DOCX, PDF, EPUB)
+- **Use for managing drafts, reviews, and release-ready exports**
+
 ---
 
 ### **Examples**
