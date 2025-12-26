@@ -403,3 +403,48 @@ If characters don't pop:
 **Ready:** YES
 
 **Go forth and be funny!**
+
+---
+
+## Developmental Edit Toolkit
+
+### Developmental Edit Checklist
+- [ ] Pacing map created (fast/slow alternation)
+- [ ] Tension curve visible with rises and releases
+- [ ] Stakes escalate at every major turning point
+- [ ] Theme statement articulated in one sentence
+- [ ] Key scenes reinforce theme (no thematic drift)
+- [ ] Character arcs align with theme and stakes
+- [ ] Subplots either serve theme or are removed
+
+### Chapter/Scene Review Prompts (Plot + Tension)
+For each chapter/scene/section, answer:
+- What changes in story state by the end?
+- How does it advance or complicate the main plot?
+- What new question or uncertainty does it create?
+- Where does it land on the tension curve (rise, peak, release)?
+- How do stakes shift (higher, more personal, more urgent)?
+- What is the reader's emotional beat?
+- Is there a clear hook or propulsive end?
+
+### Restructuring Tools
+- [ ] Reorder scenes to improve cause-and-effect or escalation
+- [ ] Merge adjacent scenes that repeat information
+- [ ] Split overloaded scenes into distinct beats
+- [ ] Remove scenes that do not change story state
+- [ ] Replace exposition-only scenes with active conflict
+- [ ] Insert bridging beats to smooth gaps after cuts
+
+### Theme Tracker (Motif/Alignment View)
+| Theme/Motif | Key appearances (chapter/scene) | Character/plot link | Alignment notes | Next action |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
+### Approval Gate: Before Line Edit
+Proceed to line-level editing only when:
+- [ ] Structural issues resolved (plot holes, order, missing beats)
+- [ ] Pacing and tension curve reviewed and adjusted
+- [ ] Stakes escalation verified across the story
+- [ ] Theme tracker filled and alignment confirmed
+- [ ] Restructuring actions completed
+- [ ] Feedback incorporated (beta/editor notes, if available)
