@@ -23,6 +23,10 @@ A comprehensive collection of research materials across various storytelling gen
 
 Each directory contains research materials and subgenre breakdowns for its respective category.
 
+## Templates
+
+- **voice-review-template.md** - Voice parameters, rhythm analysis, voice-locked alternates, tracked changes, and drift checks.
+
 ---
 
 *Generated from zai-claude workspace research materials*
