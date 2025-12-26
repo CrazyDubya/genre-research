@@ -321,3 +321,30 @@
 4. Test with real readers
 5. Return to checklist for final polish
 6. Publish when all critical items checked
+
+---
+
+## Readability, Vocabulary, and Style Checks
+- [ ] Readability score measured (e.g., Flesch-Kincaid) matches target audience.
+- [ ] Sentence length distribution supports intended pace.
+- [ ] Vocabulary level consistent (no random shifts in formality/complexity).
+- [ ] Jargon/slang is either clear from context or defined.
+- [ ] Repetitive words/phrases reduced.
+
+## Pacing Analysis (Scene Length + Tension Curve)
+- [ ] Scene lengths tracked (word/page count) and vary intentionally.
+- [ ] Long scenes broken with beats or transitions where needed.
+- [ ] Tension curve plotted across the story (rises, releases, peaks).
+- [ ] Major releases placed after high-tension scenes.
+
+## Tone and Voice Consistency Audit
+- [ ] Narrative tone consistent with genre expectations.
+- [ ] POV voice stable across chapters/sections.
+- [ ] Character voices maintain consistent diction and cadence.
+- [ ] Tonal shifts are deliberate and signposted.
+
+## Target Audience Alignment
+- [ ] Target audience defined (age, subgenre, sensitivity).
+- [ ] Content intensity matches audience expectations.
+- [ ] Complexity matches audience comfort (plot density, jargon, mechanics).
+- [ ] Hook/logline reflects what the audience wants.
