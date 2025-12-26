@@ -13,6 +13,7 @@ A comprehensive collection of research materials across various storytelling gen
 - **murder-mystery-research/** - Mystery and detective fiction research
 - **romance-story-research/** - Romance writing and subgenres
 - **slice-of-life-research/** - Slice-of-life narrative techniques
+- **writing-flow-ux.md** - UX guidance for guided writing flows and revision support
 
 ## Usage
 
