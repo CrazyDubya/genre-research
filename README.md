@@ -17,15 +17,49 @@ A comprehensive collection of research materials across various storytelling gen
 
 ## Cross-Genre Resources
 
+- **authoring-lifecycle-map.md** - Complete 8-phase authoring workflow with decision points
 - **genre-targeting-framework.md** - Identify target genres, research packets, templates, and realism modules
+- **writing-flow-ux.md** - UX guidance for guided writing flows and revision support
+- **style-integrity-guidelines.md** - Guidelines for maintaining originality-first approach and style consistency
+
+## Quality Assurance & Review
+
+- **voice-review-template.md** - Voice parameters, rhythm analysis, voice-locked alternates, tracked changes, and drift checks
+- **readability-pacing-checks.md** - Narrative element assessment (readability, pacing, voice, audience fit)
+- **pre-export-checklist.md** - Final proofreading checklist before content export
+
+## Collaboration & Workflow
+
+- **llm-collaboration-workflow.md** - LLM integration workflow with Decision Ledger guidance
+- **developmental-edit-toolkit.md** - Developmental editing tools with approval gates and revision workflows
+- **grammar-style-checker.md** - Automated grammar and style checking prototype with UI
+
+## Management Tools
+
+- **canon-management-worksheet.md** - Structured worksheet for tracking story canon and continuity
 
 ## Usage
 
-Each directory contains research materials and subgenre breakdowns for its respective category.
+Each directory contains research materials and subgenre breakdowns for its respective category. Use the cross-genre resources for frameworks and guidance applicable across all story types.
 
-## Templates
+## Tools & Features
 
-- **voice-review-template.md** - Voice parameters, rhythm analysis, voice-locked alternates, tracked changes, and drift checks.
+### Writing Support
+- Guided writing flow modes (Quick Outline, Scene Builder)
+- Scene continuity tracking
+- Revision prioritization and visibility
+
+### Revision Support  
+- Developmental edit wizards
+- LLM-assisted revision with safeguards
+- Continuity checking across scenes
+- Voice consistency validation
+
+### Quality Checks
+- Grammar and style automation
+- Readability metrics
+- Audience and genre alignment
+- Voice parameter tracking
 
 ---
 
