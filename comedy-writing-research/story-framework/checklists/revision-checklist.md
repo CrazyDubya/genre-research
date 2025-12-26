@@ -280,6 +280,13 @@ A systematic guide to revising and improving your comedy writing across all form
 - [ ] **Format consistent** - Is formatting uniform throughout?
 - [ ] **Typos eliminated** - Is text error-free?
 
+### Pre-Export Checklist (Proofread-Only Pass)
+- [ ] **Typography sweep** - Quotes, em dashes, and ellipses checked
+- [ ] **Formatting validated** - Chapter headings, spacing, paragraph indentation
+- [ ] **Word-level errors checked** - Repeated words, missing words, homophones
+- [ ] **Proofread-only mode enabled** - Content locked; corrections only
+- [ ] **Pre-export checklist completed** - Ready for final output
+
 ### Comedy-Specific Polish
 - [ ] **Every word earns its place** - Is there fat to trim?
 - [ ] **Sharpest punchlines chosen** - Are alternative punchlines considered?

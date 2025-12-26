@@ -218,6 +218,14 @@
 - [ ] **Paragraph Breaks:** Correct dialogue formatting
 - [ ] **Typos:** None remaining
 
+### Pre-Export Checklist (Proofread-Only Pass)
+
+- [ ] **Typography sweep:** Quotes, em dashes, ellipses checked
+- [ ] **Formatting validated:** Chapter headings, spacing, paragraph indentation
+- [ ] **Word-level errors checked:** Repeated words, missing words, homophones
+- [ ] **Proofread-only mode enabled:** Content locked; corrections only
+- [ ] **Pre-export checklist completed:** Ready for final output
+
 ### Title
 
 - [ ] **Fits Story:** Title reflects content/mood
