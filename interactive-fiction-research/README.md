@@ -68,6 +68,7 @@ interactive-fiction-research/
 │   │   └── if-bible-template.md (world and story tracking)
 │   ├── worksheets/
 │   │   └── puzzle-design-worksheet.md (puzzle and challenge planning)
+│   ├── llm-collaboration.md (LLM collaboration modes and canon safeguards)
 │   └── checklists/
 │       └── revision-checklist.md (interaction consistency check)
 │
@@ -203,6 +204,12 @@ interactive-fiction-research/
 - 10 phases: World, Objects, Puzzles, Characters, Interaction, Exploration, Story, Prose, IF Specifics, Player Experience
 - Final questions and revision priorities
 - **Use during testing** to ensure quality across all interactions
+
+**[story-framework/llm-collaboration.md](story-framework/llm-collaboration.md)**
+- Collaboration modes for LLM-assisted development
+- Decision ledger and canon confirmation workflows
+- Clarifier checkpoints and diff view requirements
+- **Use when collaborating with AI tools** to protect canon and maintain transparency
 
 ---
 
