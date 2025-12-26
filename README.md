@@ -14,6 +14,10 @@ A comprehensive collection of research materials across various storytelling gen
 - **romance-story-research/** - Romance writing and subgenres
 - **slice-of-life-research/** - Slice-of-life narrative techniques
 
+## Cross-Genre Resources
+
+- **genre-targeting-framework.md** - Identify target genres, research packets, templates, and realism modules
+
 ## Usage
 
 Each directory contains research materials and subgenre breakdowns for its respective category.
