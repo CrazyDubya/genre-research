@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grammar & Style Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Grammar & Style Checker</h1>
+        <p>Review grammar, mechanics, and style rules with approvals and overrides.</p>
+      </header>
+
+      <section class="controls">
+        <label class="field">
+          <span class="field__label">Style guide</span>
+          <select id="styleGuide">
+            <option value="cmos">Chicago Manual of Style (CMOS)</option>
+            <option value="ap">Associated Press (AP)</option>
+            <option value="custom">Custom</option>
+          </select>
+        </label>
+        <div id="customOptions" class="custom-options" hidden>
+          <label class="field field--inline">
+            <input type="checkbox" id="customOxford" checked />
+            <span>Require Oxford comma in lists</span>
+          </label>
+          <label class="field field--inline">
+            <input type="checkbox" id="customFragments" />
+            <span>Allow sentence fragments</span>
+          </label>
+        </div>
+        <label class="field">
+          <span class="field__label">Rule overrides (comma-separated rule IDs)</span>
+          <input id="ruleOverrides" type="text" placeholder="e.g., subject-verb, punctuation" />
+          <small class="field__hint">Overrides skip matching rules during checks.</small>
+        </label>
+      </section>
+
+      <section class="editor">
+        <label class="field">
+          <span class="field__label">Draft text</span>
+          <textarea id="draft" rows="8" placeholder="Paste or type your text here..."></textarea>
+        </label>
+        <button id="runCheck" class="button">Run checks</button>
+      </section>
+
+      <section class="results">
+        <div class="results__header">
+          <h2>Corrections</h2>
+          <span id="resultsCount">0 issues</span>
+        </div>
+        <div id="resultsList" class="results__list"></div>
+      </section>
+    </main>
+
+    <template id="resultTemplate">
+      <article class="result">
+        <div class="result__meta">
+          <h3 class="result__title"></h3>
+          <span class="result__rule"></span>
+        </div>
+        <p class="result__summary"></p>
+        <div class="result__detail">
+          <div>
+            <strong>Explanation</strong>
+            <p class="result__explanation"></p>
+          </div>
+          <div>
+            <strong>Example</strong>
+            <p class="result__example"></p>
+          </div>
+        </div>
+        <div class="result__actions">
+          <button class="button button--approve">Approve</button>
+          <button class="button button--reject">Reject</button>
+          <span class="result__status"></span>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
