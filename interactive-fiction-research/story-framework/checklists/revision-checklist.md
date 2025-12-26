@@ -227,6 +227,37 @@
 
 ---
 
+## Editing Workflow Design (GUI)
+
+### Stage-to-Workflow Map
+- [ ] **Scene-level critique:** Open scene view → highlight issues → add notes tied to scene nodes
+- [ ] **Chapter rewrites:** Open chapter outline → batch-edit scene summaries → regenerate transitions
+- [ ] **Arc alignment:** Open story map → visualize branches → flag missing beats or dead paths
+- [ ] **Consistency pass:** Open global search → filter by character, object, or location → resolve mismatches
+- [ ] **Final polish:** Open proofreading mode → scan for style, grammar, and tone issues
+
+### Editing Prompts by Stage
+- [ ] **Tone:** Does the scene sustain the intended mood? Where does it drift?
+- [ ] **Pacing:** Are choice beats too dense or too sparse? Where should tension rise or release?
+- [ ] **POV consistency:** Do descriptions or responses break the established viewpoint?
+- [ ] **Clarity:** Are player goals and action affordances obvious in this segment?
+- [ ] **Agency:** Do choices feel meaningful, or do branches collapse too quickly?
+
+### Comparison Views
+- [ ] Provide side-by-side view of **original vs. revised** text
+- [ ] Show inline diffs for scene descriptions, object text, and NPC dialogue
+- [ ] Toggle between branch paths to compare pacing and outcome changes
+- [ ] Allow rollbacks to any previous version from the comparison panel
+
+### Traceability and Approvals
+- [ ] Maintain change logs per scene, chapter, and global pass
+- [ ] Tag edits with stage (critique, rewrite, polish) and author
+- [ ] Require approval before merging rewrites into the main branch
+- [ ] Store rationale notes with each change for later review
+- [ ] Export a revision summary for release notes or QA review
+
+---
+
 ## Quick Checks
 
 ### Critical Must-Haves
