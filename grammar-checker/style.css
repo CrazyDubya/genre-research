@@ -1,0 +1,175 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  background: #f6f6f9;
+  color: #1e1e2f;
+}
+
+body {
+  margin: 0;
+  padding: 32px 20px 60px;
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 32px 40px;
+  box-shadow: 0 24px 60px rgba(21, 23, 33, 0.12);
+}
+
+.app__header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.app__header p {
+  margin: 0;
+  color: #5c5c72;
+}
+
+.controls,
+.editor,
+.results {
+  margin-top: 28px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.field--inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.field__label {
+  font-weight: 600;
+}
+
+.field__hint {
+  color: #6c6c85;
+}
+
+textarea,
+input,
+select {
+  border: 1px solid #d7d7e5;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.custom-options {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px dashed #c6c6dc;
+  background: #fafafe;
+}
+
+.button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  background: #3131ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.button--approve {
+  background: #1c8c5c;
+}
+
+.button--reject {
+  background: #a13a3a;
+}
+
+.results__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.results__list {
+  display: grid;
+  gap: 18px;
+}
+
+.result {
+  border-radius: 16px;
+  border: 1px solid #e0e0ef;
+  padding: 18px;
+  background: #fcfcff;
+}
+
+.result__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result__title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.result__rule {
+  font-size: 0.85rem;
+  color: #6b6b84;
+}
+
+.result__summary {
+  margin: 8px 0 12px;
+  color: #313144;
+}
+
+.result__detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  background: #f4f4fb;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.result__detail p {
+  margin: 6px 0 0;
+  color: #3f3f52;
+}
+
+.result__actions {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.result__status {
+  font-weight: 600;
+  color: #4b4b61;
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 20px;
+  }
+
+  .result__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
