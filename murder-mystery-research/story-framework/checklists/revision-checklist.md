@@ -328,6 +328,13 @@
 - [ ] No widows/orphans (if publishing)
 - [ ] Consistent style
 
+### Pre-Export Checklist (Proofread-Only Pass)
+- [ ] Punctuation/typography sweep (quotes, em dashes, ellipses)
+- [ ] Formatting validated (chapter headings, spacing, paragraph indentation)
+- [ ] Repeated words, missing words, and homophones checked
+- [ ] Proofread-only mode enabled (content locked; corrections only)
+- [ ] Pre-export checklist completed
+
 ### Title and Package
 - [ ] Title works
 - [ ] Title appropriate

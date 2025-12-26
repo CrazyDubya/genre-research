@@ -313,6 +313,13 @@ For each chase, check:
 - [ ] Ready for audience
 - [ ] Best work you can produce
 
+### Pre-Export Checklist (Proofread-Only Pass)
+- [ ] Punctuation/typography sweep (quotes, em dashes, ellipses)
+- [ ] Formatting validated (chapter headings, spacing, paragraph indentation)
+- [ ] Repeated words, missing words, and homophones checked
+- [ ] Proofread-only mode enabled (content locked; corrections only)
+- [ ] Pre-export checklist completed
+
 ### Common Problem Check
 - [ ] No confusing geography
 - [ ] No low stakes

@@ -262,6 +262,14 @@
 - [ ] **Suggest More Than Show**: Is imagination used (often scarier)?
 - [ ] **Visceral Impact**: Does gore have emotional impact?
 
+### Pre-Export Checklist (Proofread-Only Pass)
+
+- [ ] **Typography sweep**: Quotes, em dashes, ellipses checked
+- [ ] **Formatting validated**: Chapter headings, spacing, paragraph indentation
+- [ ] **Word-level errors checked**: Repeated words, missing words, homophones
+- [ ] **Proofread-only mode enabled**: Content locked; corrections only
+- [ ] **Pre-export checklist completed**: Ready for final output
+
 ---
 
 ## Phase 11: Reader Experience Check
