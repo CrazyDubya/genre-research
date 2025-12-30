@@ -19,6 +19,7 @@ class LLMProvider(Enum):
     """Supported LLM providers."""
     ANTHROPIC = "anthropic"
     OPENAI = "openai"
+    OPENROUTER = "openrouter"
     OLLAMA = "ollama"
     CUSTOM = "custom"
 
@@ -45,6 +46,10 @@ class LLMConfig:
         elif provider == LLMProvider.OPENAI:
             config.api_key = os.getenv("OPENAI_API_KEY")
             config.model = os.getenv("OPENAI_MODEL", "gpt-4o")
+        elif provider == LLMProvider.OPENROUTER:
+            config.api_key = os.getenv("OPENROUTER_API_KEY")
+            config.base_url = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+            config.model = os.getenv("OPENROUTER_MODEL", "anthropic/claude-sonnet-4")
         elif provider == LLMProvider.OLLAMA:
             config.base_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
             config.model = os.getenv("OLLAMA_MODEL", "llama3.2")
@@ -272,6 +277,141 @@ class OpenAIClient(BaseLLMClient):
             yield f"[Error: {str(e)}]"
 
 
+class OpenRouterClient(BaseLLMClient):
+    """
+    OpenRouter client - unified access to multiple LLM providers.
+
+    OpenRouter provides a single API endpoint to access models from:
+    - Anthropic (Claude)
+    - OpenAI (GPT-4, GPT-4o)
+    - Meta (Llama)
+    - Mistral
+    - Google (Gemini)
+    - And many more
+
+    Uses OpenAI-compatible API format with additional headers.
+    """
+
+    def __init__(self, config: LLMConfig):
+        super().__init__(config)
+        self.client = None
+        self.base_url = config.base_url or "https://openrouter.ai/api/v1"
+
+    def _ensure_client(self):
+        """Lazy initialization of client."""
+        if self.client is None:
+            try:
+                from openai import AsyncOpenAI
+                self.client = AsyncOpenAI(
+                    api_key=self.config.api_key,
+                    base_url=self.base_url,
+                    default_headers={
+                        "HTTP-Referer": "https://github.com/genre-research/novel-writer-harness",
+                        "X-Title": "Novel Writer Harness",
+                    },
+                )
+            except ImportError:
+                raise ImportError("openai package not installed. Run: pip install openai")
+
+    async def generate(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        context: str = "",
+    ) -> LLMResponse:
+        """Generate a completion using OpenRouter."""
+        self._ensure_client()
+
+        messages = [{"role": "system", "content": system_prompt}]
+
+        if context:
+            messages.append({"role": "user", "content": f"Context:\n{context}"})
+            messages.append({"role": "assistant", "content": "I understand the context. How can I help?"})
+
+        messages.append({"role": "user", "content": user_prompt})
+
+        try:
+            response = await self.client.chat.completions.create(
+                model=self.config.model,
+                messages=messages,
+                max_tokens=self.config.max_tokens,
+                temperature=self.config.temperature,
+            )
+
+            choice = response.choices[0]
+            return LLMResponse(
+                content=choice.message.content,
+                model=response.model,
+                usage={
+                    "input_tokens": response.usage.prompt_tokens if response.usage else 0,
+                    "output_tokens": response.usage.completion_tokens if response.usage else 0,
+                },
+                finish_reason=choice.finish_reason,
+            )
+        except Exception as e:
+            return LLMResponse(
+                content="",
+                model=self.config.model,
+                error=str(e),
+            )
+
+    async def stream(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        context: str = "",
+    ) -> AsyncIterator[str]:
+        """Stream a completion using OpenRouter."""
+        self._ensure_client()
+
+        messages = [{"role": "system", "content": system_prompt}]
+
+        if context:
+            messages.append({"role": "user", "content": f"Context:\n{context}"})
+            messages.append({"role": "assistant", "content": "I understand the context. How can I help?"})
+
+        messages.append({"role": "user", "content": user_prompt})
+
+        try:
+            stream = await self.client.chat.completions.create(
+                model=self.config.model,
+                messages=messages,
+                max_tokens=self.config.max_tokens,
+                temperature=self.config.temperature,
+                stream=True,
+            )
+
+            async for chunk in stream:
+                if chunk.choices[0].delta.content:
+                    yield chunk.choices[0].delta.content
+        except Exception as e:
+            yield f"[Error: {str(e)}]"
+
+    def get_available_models(self) -> list[str]:
+        """Return commonly used OpenRouter model identifiers."""
+        return [
+            # Anthropic
+            "anthropic/claude-sonnet-4",
+            "anthropic/claude-opus-4",
+            "anthropic/claude-3.5-sonnet",
+            "anthropic/claude-3-opus",
+            # OpenAI
+            "openai/gpt-4o",
+            "openai/gpt-4-turbo",
+            "openai/o1-preview",
+            # Meta
+            "meta-llama/llama-3.1-405b-instruct",
+            "meta-llama/llama-3.1-70b-instruct",
+            # Mistral
+            "mistralai/mistral-large",
+            "mistralai/mixtral-8x22b-instruct",
+            # Google
+            "google/gemini-pro-1.5",
+            # DeepSeek
+            "deepseek/deepseek-chat",
+        ]
+
+
 class OllamaClient(BaseLLMClient):
     """Ollama local model client."""
 
@@ -380,6 +520,7 @@ class LLMService:
         clients = {
             LLMProvider.ANTHROPIC: AnthropicClient,
             LLMProvider.OPENAI: OpenAIClient,
+            LLMProvider.OPENROUTER: OpenRouterClient,
             LLMProvider.OLLAMA: OllamaClient,
         }
 
