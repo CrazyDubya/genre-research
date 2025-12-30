@@ -33,6 +33,11 @@ class LLMSettings:
     ollama_url: str = "http://localhost:11434"
     ollama_model: str = "llama3.2"
 
+    # OpenRouter-specific
+    openrouter_api_key_env: str = "OPENROUTER_API_KEY"
+    openrouter_base_url: str = "https://openrouter.ai/api/v1"
+    openrouter_model: str = "anthropic/claude-sonnet-4"
+
 
 @dataclass
 class WritingGoals:
@@ -94,6 +99,9 @@ class Config:
                 "api_key_env": self.llm.api_key_env,
                 "ollama_url": self.llm.ollama_url,
                 "ollama_model": self.llm.ollama_model,
+                "openrouter_api_key_env": self.llm.openrouter_api_key_env,
+                "openrouter_base_url": self.llm.openrouter_base_url,
+                "openrouter_model": self.llm.openrouter_model,
             },
             "goals": {
                 "daily_word_count": self.goals.daily_word_count,
@@ -138,6 +146,9 @@ class Config:
                 api_key_env=llm_data.get("api_key_env", "ANTHROPIC_API_KEY"),
                 ollama_url=llm_data.get("ollama_url", "http://localhost:11434"),
                 ollama_model=llm_data.get("ollama_model", "llama3.2"),
+                openrouter_api_key_env=llm_data.get("openrouter_api_key_env", "OPENROUTER_API_KEY"),
+                openrouter_base_url=llm_data.get("openrouter_base_url", "https://openrouter.ai/api/v1"),
+                openrouter_model=llm_data.get("openrouter_model", "anthropic/claude-sonnet-4"),
             ),
             goals=WritingGoals(
                 daily_word_count=goals_data.get("daily_word_count", 1000),
