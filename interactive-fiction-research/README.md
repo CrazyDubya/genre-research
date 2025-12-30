@@ -194,6 +194,11 @@ interactive-fiction-research/
 - Sections: World overview, object inventory, puzzle mapping, state tracking, character behaviors, revision notes
 - **Use throughout development** to maintain consistency across the world
 
+**[story-framework/authoring-pipeline.md](story-framework/authoring-pipeline.md)**
+- Core module breakdown for IF authoring workflows
+- Inputs/outputs, artifacts, and inter-module dependencies
+- **Use to coordinate** idea capture, outlining, drafting, and canon management
+
 **[story-framework/worksheets/puzzle-design-worksheet.md](story-framework/worksheets/puzzle-design-worksheet.md)**
 - Step-by-step worksheet for planning interactive elements
 - Sections: Basic world, puzzle concepts, object relationships, solution paths, testing approaches
