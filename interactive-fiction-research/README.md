@@ -63,6 +63,9 @@ interactive-fiction-research/
 ├── storytelling-techniques/
 │   └── environmental-storytelling.md (story through world description)
 │
+├── prompting/
+│   └── prompt-mode-framework.md (structured prompt modes, templates, canon checks)
+│
 ├── story-framework/
 │   ├── templates/
 │   │   └── if-bible-template.md (world and story tracking)
@@ -215,6 +218,18 @@ interactive-fiction-research/
 - Decision ledger and canon confirmation workflows
 - Clarifier checkpoints and diff view requirements
 - **Use when collaborating with AI tools** to protect canon and maintain transparency
+
+---
+
+### **Prompting Framework**
+
+**[prompting/prompt-mode-framework.md](prompting/prompt-mode-framework.md)**
+- Distinct prompt modes (brainstorm, outline, draft, revise, critique)
+- Structured prompt templates to prevent drift
+- Canon pack memory system (facts, traits, world rules)
+- Validation step to check drafts against canon and specs
+
+**Use for:** Building a consistent, repeatable prompting workflow for LLM-assisted IF writing.
 
 ---
 
