@@ -24,6 +24,7 @@ A comprehensive collection of research materials across various storytelling gen
 
 ## Quality Assurance & Review
 
+- **COMPREHENSIVE_CODE_REVIEW.md** - Full codebase analysis with quantitative metrics, architecture overview, and refactoring roadmap
 - **voice-review-template.md** - Voice parameters, rhythm analysis, voice-locked alternates, tracked changes, and drift checks
 - **readability-pacing-checks.md** - Narrative element assessment (readability, pacing, voice, audience fit)
 - **pre-export-checklist.md** - Final proofreading checklist before content export
