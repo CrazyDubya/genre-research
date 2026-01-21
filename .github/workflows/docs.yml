@@ -1,0 +1,37 @@
+name: Documentation Check
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '**/*.md'
+      - '.github/workflows/docs.yml'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - '**/*.md'
+
+jobs:
+  check-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check for broken links
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quiet-mode: 'yes'
+        use-verbose-mode: 'no'
+        config-file: '.github/markdown-link-check-config.json'
+
+    - name: Lint markdown files
+      run: |
+        npm install -g markdownlint-cli
+        markdownlint '**/*.md' --ignore node_modules --ignore .git || true
+
+    - name: Check file sizes
+      run: |
+        echo "Checking for large documentation files (>1000 lines)..."
+        find . -name "*.md" -type f -exec sh -c 'lines=$(wc -l < "$1"); if [ $lines -gt 1000 ]; then echo "⚠️  $1: $lines lines (should be split)"; fi' _ {} \;
