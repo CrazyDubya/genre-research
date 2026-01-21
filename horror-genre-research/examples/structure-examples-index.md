@@ -1,24 +1,3 @@
-# Horror Story Structure Examples
-
-**Concrete breakdowns of famous horror stories to illustrate principles in action.**
-
----
-
-## Table of Contents
-
-1. [The Shining (1980) - Slow Burn Supernatural](#example-1-the-shining)
-2. [Get Out (2017) - Social Horror](#example-2-get-out)
-3. [A Quiet Place (2018) - Creature Feature Survival](#example-3-a-quiet-place)
-4. [Halloween (1978) - Slasher Template](#example-4-halloween)
-5. [The Ring (2002) - Curse Investigation](#example-5-the-ring)
-6. [Hereditary (2018) - Psychological/Family Trauma Horror](#example-6-hereditary)
-7. [Night of the Living Dead (1968) - Zombie Siege](#example-7-night-of-the-living-dead)
-8. [It Follows (2014) - Supernatural Curse](#example-8-it-follows)
-
----
-
-<a name="example-1-the-shining"></a>
-
 # Horror Story Structure Examples - Index
 
 **Concrete breakdowns of famous horror stories to illustrate principles in action.**
