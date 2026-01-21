@@ -12,7 +12,7 @@ src_path = Path(__file__).parent
 sys.path.insert(0, str(src_path))
 
 
-def main():
+def main() -> None:
     """Run the Novel Writer Harness application."""
     from gui import MainWindow
 
